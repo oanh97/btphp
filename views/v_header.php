@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <link href="./css/jquery.bxslider.css" rel="stylesheet" type="text/css">
+    <script src="./lib/jquery-1.9.1.min.js"  type="text/javascript"></script>
+    <script src="./lib/jquery.bxslider.min.js"  type="text/javascript"></script>
+    <title>Zalora</title>
+</head>
+<body>
+    <div class="banner">
+        <img alt="Ảnh banner ở đây" src="./tapanh/Bia1.PNG" width="100%" />
+    </div>
+    <div class="navigation">
+        <ul>
+            <li><a href="?page=home">Trang chủ</a></li>
+            <li><a href="?page=introduction">Giới thiệu</a></li>
+            <!-- <li><a href="?page=productList">Sản phẩm</a></li> -->
+            <li><a href="?page=newsList">Tin tức</a></li>
+            <li><a href="?page=contact">Liên hệ</a></li>
+            <li><a href="?page=user">Quản lý người dùng</a></li>
+            <li><a href="?page=productType">Quản lý sản phẩm</a></li>
+            <?php @session_start(); if(!empty($_SESSION['isAdmin']) and $_SESSION['isAdmin'] == 1) { ?>
+            <li><a href="?page=admin">Quản trị</a></li>
+            <?php } ?>
+            <?php @session_start(); if(!empty($_SESSION['login']) and $_SESSION['login'] == 1) { ?>
+            <li class="cart"><a href="?page=your-cart">Giỏ hàng: <?=$_SESSION['cart']['buying-quantities'] ?> </a></li>
+            <?php } ?>
+        </ul>
+        
+        
+    </div>    
+    <div class="main">
+        <div class="left">
+            <div class="vertical">
+                 <ul>
+                        <li><span>Loại sản phẩm</span></li>
+                    <?php foreach($productTypes as $type) { ?>
+                        <li><a href="?page=productList&typeId=<?=$type['id']?>"><?=$type["tenhang"]?></a></li>            
+                    <?php } ?>
+                </ul>
+                <ul>
+                        <li><span>Tài khoản</span></li>
+                        <?php  if(!empty($_SESSION['login']) and $_SESSION['login'] == 1 ) {    ?>                    
+                            <li><a >Xin chào bạn<br /> <?=$_SESSION["username"]  ?></a></li>
+                            <li><a href="?page=your-invoice" >Hàng đã mua</a></li>
+                            <li><a href="?page=login&action=logout" >Đăng xuất</a></li>
+                        <?php } else {    ?>  
+                            <li><a href="?page=login&">Đăng nhập</a></li>
+                            <li><a href="?page=register">Đăng ký</a></li> 
+                        <?php  } ?>        
+                </ul>
+            </div>
+            
+            
+        </div>
+        <div class="center">
+

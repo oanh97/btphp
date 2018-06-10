@@ -1,0 +1,291 @@
+body
+{
+    width: 1000px;
+    margin: 0px auto;
+}
+/****************************** Bố cục cho toàn trang *****************/
+.main{
+     float:left;
+}
+.left{
+     width:200px;
+     background:lightblue;
+     color:black;
+     float:left;
+     text-align:center;
+     line-height:600px;    
+}
+.center{
+     width:800px;
+     float:left;   
+
+}
+
+/***********************Menu ngang *******************/
+
+.navigation
+{
+    width: 100%;
+    padding-bottom: 10px;
+      
+}
+
+.navigation ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 1px;
+    background-color:black; 
+    height: 44px;
+    
+}
+
+.navigation ul li
+{
+    float: left;
+    position:relative;
+    padding:0;
+    margin:0;
+    border-right:1px solid #999;
+    background:black; 
+}
+
+.navigation ul li a {
+    display:block;
+    text-decoration:none;
+    font-size:18px;
+    color:red;
+    padding:0 30px;
+    line-height:43px;
+}
+
+.navigation ul li:hover a {
+    position:relative;
+    background:#777;
+    color:#fff;
+}
+
+.navigation .cart
+{
+    float: right;
+    position:relative;
+    padding:0;
+    margin:0;
+    border-right:1px solid #999;
+    background: #999; 
+}
+
+/********************************************************************* Vertical **********/
+.vertical
+{
+    width: 100%;
+    background-color: #aaa;
+    height: 44px;  
+}
+
+.vertical ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 1px;
+    
+}
+
+.vertical ul li
+{
+    position:relative;
+    padding:0;
+    margin:0;
+    border-bottom:1px solid #999;
+    background: #C60;
+}
+
+.vertical ul li a {
+    display:block;
+    text-decoration:none;
+    font-size:18px;
+    color:#fff;
+    padding:0 30px;
+    line-height:43px;
+}
+
+.vertical ul li span {
+    display:block;
+    text-decoration:none;
+    font-size:18px;
+    color: #0080FF;
+    padding:0 30px;
+    line-height:43px;
+    background-color: #C8D52B;
+}
+
+.vertical ul li:hover a {
+    position:relative;
+    background:#777;
+    color:#fff;
+}
+/***************************** Product cell **********************************/
+.productGrid
+{
+	border-collapse:collapse;
+	border-bottom:hidden;
+	border-top:hidden;
+	border-left:hidden;
+	border-right:hidden;
+	border-color:#999999;
+}
+
+.productGrid td
+{
+	padding:10px;
+	width:50px;
+}
+
+.productGrid td:hover
+{
+	background-color:#CCCCCC;	
+}
+
+.productGrid td span
+{
+	display:block;
+}
+
+.productGrid td .productName a
+{
+	color:#000099;
+	font-size:18px;
+	display:block;
+	text-decoration:none;
+}
+
+/****************************** Định dạng bảng lưới thông thường **************************/
+.gridList
+{
+    width: 95%;
+    border-collapse: collapse;    
+	border-bottom:hidden;
+	border-top:hidden;
+	border-left:hidden;
+	border-right:hidden;
+	border-color:#999999;
+    margin-left: 5%;
+}
+
+.gridList .heading
+{
+    font-size: 18px;
+	font-weight:800;
+	text-align:center;
+    
+}
+
+.gridList .odd
+{
+    background-color:#FFFFFF;  
+}
+
+.gridList .even
+{
+    background-color: #C8D52B;    
+}
+
+.gridList td
+{
+	padding: 10px;
+}
+
+/******************** Product detail style ************************/
+.productDetail
+{
+    width: 98%;
+    margin-left: 2%;
+	
+}
+
+.productDetail .productImage
+{
+    width: 40%;
+}
+
+.productDetail .productName
+{
+	color:#0000FF;
+	font-size:20px;
+	font-weight:800;
+	padding-left: 10px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.productDetail .productPrice
+{
+	color:#FF0000;
+	font-size:20px;
+	font-weight:800;
+	padding-left: 10px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.productDetail .productStatus
+{
+	color:#FF0000;
+	font-size:18px;
+	font-weight:800;
+	padding-left: 10px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.productDetail .productDescription
+{
+	font-size:14px;
+	padding-left: 10px;
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:100px;
+}
+
+.productDetail .productDescription
+{
+	font-size:14px;
+	padding-left: 10px;
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:100px;
+}
+
+.productDetail .add-to-cart {
+    padding-left: 10px;
+}
+
+
+.productDetail .add-to-cart .add-to-cart-submit {
+    display:block;
+    text-decoration:none;
+    font-size:18px;
+    line-height:43px;
+	background-color:#0066FF;
+	width:100px;
+	color:#CCCCCC;
+}
+
+.purchase {
+    display:block;
+    text-decoration:none;
+    font-size:18px;
+    color: white;
+    background-color: #0080FF;
+    padding:0 30px;
+    line-height:43px;
+    width: 100px;
+    float: right;
+}
+
+.footer{
+    text-align: center;
+    
+}
+
+
+
+
+
+
+
